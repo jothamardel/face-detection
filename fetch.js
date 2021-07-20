@@ -20,9 +20,9 @@ fetch('https://api.clarifai.com/v2/models/f76196b43bbd45c99b4f3cd8e8b40a8a/outpu
 	headers: {
 		"Authorization": "Key YOUR_API_KEY",
 		"Content-Type": "application/json",
-		"Key": "0124e25ee74f495f8d426b49219d797e"
 	},
 	body: JSON.stringify(input)
 })
     .then(res => res.json())
-    .then(data => console.log(data.outputs[0].data.regions[0].region_info));
+    .then(data => console.log(data.outputs[0].data.regions[0].region_info))
+		.catch(console.log);
